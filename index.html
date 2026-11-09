@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple two-minute Taekwondo round timer with Start, Pause, and Reset.">
+  <title>Taekwondo Round Timer</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="timer.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body data-state="ready">
+  <main>
+    <header>
+      <p class="eyebrow"><span class="mark" aria-hidden="true"></span> Training practice</p>
+      <h1>Taekwondo<br>Round Timer</h1>
+      <p class="intro">Find your focus. Make every second count.</p>
+    </header>
+    <section class="timer-card" aria-label="Two-minute round timer">
+      <div class="card-heading"><span>Single round</span><span>2 minutes</span></div>
+      <p id="status" role="status" aria-live="polite" aria-atomic="true">Ready for your round</p>
+      <div id="countdown" role="timer" aria-label="Time remaining" aria-live="off">02:00</div>
+      <progress id="progress" max="120000" value="0" aria-label="Round progress" aria-valuetext="02:00 remaining"></progress>
+      <div class="controls" aria-label="Timer controls">
+        <button id="start" type="button">Start</button>
+        <button id="pause" type="button" disabled>Pause</button>
+        <button id="reset" type="button">Reset</button>
+      </div>
+      <p class="help">Start to begin or resume. Reset to return to 02:00.</p>
+    </section>
+    <noscript><p class="noscript">Enable JavaScript in your browser to run the timer.</p></noscript>
+    <footer><span class="footer-line" aria-hidden="true"></span>One round. Your pace.</footer>
+  </main>
+</body>
+</html>

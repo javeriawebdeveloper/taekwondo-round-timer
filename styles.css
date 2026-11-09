@@ -1,0 +1,29 @@
+:root { color-scheme: dark; font-family: "Segoe UI", Arial, sans-serif; background: #101919; color: #f2f5ee; line-height: 1.5; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: radial-gradient(ellipse at top right, #20362e 0, transparent 60%); }
+main { width: min(100%, 740px); margin: auto; padding: 52px 24px 32px; }
+.eyebrow { display: flex; align-items: center; gap: 12px; color: #c6d5bd; text-transform: uppercase; letter-spacing: .16em; font-size: .75rem; font-weight: 700; }
+.mark { width: 22px; height: 22px; border: 6px solid #d5f486; transform: rotate(-12deg); }
+h1 { font-size: clamp(2.4rem, 7vw, 4rem); line-height: 1.08; letter-spacing: -.045em; margin: 24px 0 16px; }
+.intro { color: #aebeb6; font-size: 1.05rem; margin-bottom: 32px; }
+.timer-card { border: 1px solid #3d5148; background: #182522; padding: 28px; border-radius: 20px; box-shadow: 0 20px 60px #0003; }
+.card-heading { display: flex; justify-content: space-between; gap: 12px; text-transform: uppercase; letter-spacing: .12em; color: #aebeb6; font-size: .72rem; font-weight: 600; }
+#status { text-align: center; color: #d5f486; margin: 32px 0 0; font-size: .95rem; }
+#countdown { font-size: clamp(4.4rem, 18vw, 9rem); line-height: 1.3; font-weight: 650; font-variant-numeric: tabular-nums; text-align: center; letter-spacing: -.055em; }
+progress { display: block; appearance: none; width: 100%; height: 5px; margin: 20px 0 32px; border: 0; border-radius: 8px; overflow: hidden; background: #37493f; color: #d5f486; }
+progress::-webkit-progress-bar { background: #37493f; }
+progress::-webkit-progress-value { background: #d5f486; }
+progress::-moz-progress-bar { background: #d5f486; }
+.controls { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+button { min-height: 52px; border: 1px solid #62776b; border-radius: 10px; padding: 12px 8px; background: transparent; color: #f2f5ee; font: inherit; font-weight: 650; cursor: pointer; }
+#start { background: #d5f486; border-color: #d5f486; color: #172314; }
+button:hover:not(:disabled) { background: #31473c; }
+#start:hover:not(:disabled) { background: #e4ffab; }
+button:disabled, #start:disabled { background: #26372e; border-color: #46574a; color: #95a68e; cursor: not-allowed; }
+button:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
+.help { text-align: center; color: #aebeb6; font-size: .8rem; margin: 22px 0 0; }
+footer { display: flex; align-items: center; justify-content: center; gap: 12px; color: #aebeb6; font-size: .8rem; padding: 28px 0; }
+.footer-line { width: 24px; height: 2px; background: #d5f486; }
+body[data-state="complete"] .timer-card { border-color: #d5f486; }
+.noscript { padding: 16px; background: #4b351e; }
+@media (max-width: 400px) { main { padding: 28px 16px; } .timer-card { padding: 20px 16px; } .controls { gap: 8px; } }

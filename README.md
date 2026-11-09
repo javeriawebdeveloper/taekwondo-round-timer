@@ -6,7 +6,21 @@ Build a simple two-minute countdown for Taekwondo training practice. The timer
 will open directly in a browser and display the time remaining as minutes and
 seconds, starting at **02:00**. No installation or server will be needed.
 
-This repository currently contains the plan only. The timer app is not built yet.
+The timer is implemented with HTML, CSS, and JavaScript. It runs locally without
+external dependencies, network requests, or saved personal data.
+
+## Open on Windows
+
+1. On this repository's GitHub page, select `main` and choose **Code > Download ZIP**.
+2. Right-click the downloaded ZIP in File Explorer and choose **Extract All**.
+3. Open the extracted folder and double-click `index.html`. If needed, use
+   **Open with > Microsoft Edge** or **Google Chrome**.
+4. Keep `index.html`, `styles.css`, `timer.js`, and `app.js` in the same folder.
+5. Click **Start** to begin. Use **Pause** to stop temporarily, **Start** to
+   resume, and **Reset** for a fresh round.
+
+JavaScript must be enabled. No server or installation is required. The GitHub
+repository link shows the source files; it is not a hosted running app.
 
 ## The three buttons
 
@@ -71,6 +85,22 @@ for every check.
 
 Record which checks pass and any browser limitations before calling the app
 ready for training practice.
+
+## Verification results
+
+Run `node --test timer.test.js` with Node.js to execute the controllable-clock
+tests. They cover initial state, time boundaries, repeated Start, partial-second
+pause/resume, Reset in every state, completion, delayed updates, and button wiring.
+The UI wiring test uses a simulated document; it does not replace browser tests.
+
+Automated tests, JavaScript syntax checks, and whitespace checks passed during
+development. Real Edge/Chrome testing, a stopwatch comparison, and visual and
+keyboard review on Windows are still pending. The managed environment's required
+browser tool was unavailable, so no browser verification is claimed.
+
+Keep the browser and device awake during training. Background tabs can delay
+visible updates; the timer catches up when JavaScript next runs. Behavior across
+device sleep may vary with the browser's underlying clock.
 
 ## Git workflow
 
